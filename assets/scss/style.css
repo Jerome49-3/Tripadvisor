@@ -1,0 +1,196 @@
+@keyframes borderSlide {
+  from {
+    opacity: 0.25;
+  }
+  85% {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* ul {
+  list-style: none;
+}
+* a {
+  color: black;
+}
+* a:visited {
+  color: purple;
+}
+* a:hover {
+  color: green;
+}
+
+header {
+  display: block;
+  padding: 20px;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .wrapper img {
+  width: 200px;
+}
+header .wrapper nav {
+  display: block;
+  width: 400px;
+}
+header .wrapper nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .wrapper nav ul li {
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+}
+header .wrapper nav ul li button {
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-weight: 500;
+}
+header .wrapper nav ul li a {
+  font-weight: 900;
+  text-decoration: none;
+}
+header .wrapper nav ul li a, header .wrapper nav ul li button {
+  padding: 8px;
+}
+header .wrapper nav ul li:hover:not(li:nth-child(4)) {
+  border-bottom: 2px solid #34E0A1;
+}
+header .wrapper nav ul li:hover button {
+  cursor: pointer;
+  color: black;
+  background-color: #34E0A1;
+  box-shadow: inset 0px 0px 6px green, 0px 0px 4px black;
+  font-weight: 700;
+}
+header .wrapper nav ul li:hover a {
+  text-shadow: 1px 1px 1px rgb(248, 246, 246), 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 3px rgb(248, 246, 246), 3px 3px 4px rgb(248, 246, 246), 1px 1px 2px rgba(0, 0, 0, 0.7), 2px 2px 3px rgba(0, 0, 0, 0.7), 3px 3px 4px rgba(0, 0, 0, 0.7);
+}
+header .wrapper nav ul li:hover .fa-solid, header .wrapper nav ul li:hover .fa-regular {
+  text-shadow: 1px 1px 1px rgb(248, 246, 246), 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+header .wrapper nav ul li .boxHearth .hearthFull {
+  display: none;
+}
+header .wrapper nav ul li:hover:nth-child(3) .boxHearth .hearthFull {
+  display: flex;
+  color: #34E0A1;
+}
+header .wrapper nav ul li:hover:nth-child(3) .boxHearth .hearthEmpty {
+  display: none;
+}
+
+main .wrapper {
+  max-width: 1235px;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .wrapper .secOne {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .wrapper .secOne .title {
+  display: flex;
+  gap: 10px;
+}
+main .wrapper .secOne .title span:first-child {
+  color: #ff5d5d;
+}
+main .wrapper .secOne .title span {
+  font-weight: 800;
+  font-size: 48px;
+}
+main .wrapper .secOne .secFilters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
+main .wrapper .secOne .secFilters article {
+  display: flex;
+  width: calc(100% - 60px);
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 80px;
+}
+main .wrapper .secOne .secFilters article:first-child {
+  margin-right: 10px;
+}
+main .wrapper .secOne .secFilters article:last-child {
+  margin-left: 10px;
+}
+main .wrapper .secOne .secFilters article:nth-child(2), main .wrapper .secOne .secFilters article:nth-child(3), main .wrapper .secOne .secFilters article:nth-child(4), main .wrapper .secOne .secFilters article:nth-child(5) {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+main .wrapper .secOne .secFilters article p {
+  width: 70%;
+}
+main .wrapper .secOne .secFilters article i {
+  font-size: 24px;
+}
+main .wrapper .secOne .SecGalerie {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+main .wrapper .secOne .SecGalerie div img:hover {
+  animation: borderSlide 2s linear both;
+  transition: all 1s;
+}
+main .wrapper .secOne .SecGalerie div:first-child img, main .wrapper .secOne .SecGalerie div:last-child img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .wrapper .secOne .SecGalerie div:first-child {
+  display: flex;
+  gap: 4px;
+}
+main .wrapper .secOne .SecGalerie div:first-child img {
+  width: 720px;
+  height: 455px;
+}
+main .wrapper .secOne .SecGalerie div:last-child img {
+  height: 226px;
+  width: 510px;
+}
+main .wrapper .secOne .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .wrapper .secOne .secBlabla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .wrapper .secOne .secBlabla * {
+  border: 2px solid black;
+}
+main .wrapper .secOne .secBlabla article img {
+  height: 140px;
+  width: 311px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .wrapper .secOne .secBlabla div:first-child {
+  width: 60%;
+}/*# sourceMappingURL=style.css.map */

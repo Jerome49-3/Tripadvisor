@@ -1,0 +1,83 @@
+header {
+  display: block;
+  padding: 20px;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 200px;
+    }
+
+    nav {
+      display: block;
+      width: 400px;
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+          min-width: 120px;
+          @include flexCenter;
+          border-bottom: 2px solid transparent;
+
+          button {
+            border: none;
+            background-color: $black;
+            color: $white;
+            border-radius: 50px;
+            font-weight: 500;
+          }
+
+          & a {
+            font-weight: 900;
+            text-decoration: none;
+          }
+
+          & a,
+          & button {
+            padding: 8px;
+          }
+
+          &:hover:not(li:nth-child(4)) {
+            border-bottom: 2px solid $tripColor;
+          }
+
+          &:hover button {
+            cursor: pointer;
+            color: $black;
+            background-color: $tripColor;
+            box-shadow: inset 0px 0px 6px green, 0px 0px 4px $black;
+            font-weight: 700;
+          }
+
+          &:hover a {
+            text-shadow: $textShadow;
+          }
+
+          &:hover .fa-solid,
+          &:hover .fa-regular {
+            text-shadow: 1px 1px 1px $textShadow1w, 1px 1px 1px $textShadow2b;
+          }
+
+          .boxHearth .hearthFull {
+            display: none;
+          }
+
+          &:hover:nth-child(3) .boxHearth .hearthFull {
+            display: flex;
+            color: $tripColor;
+          }
+
+          &:hover:nth-child(3) .boxHearth .hearthEmpty {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
